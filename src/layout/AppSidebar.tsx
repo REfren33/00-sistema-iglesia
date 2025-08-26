@@ -323,10 +323,11 @@ const AppSidebar: React.FC = () => {
             </>
           ) : (
             <img
-              src="/images/logo/logo-icon.svg"
+              src="/images/logo/catedral-icon-solid.svg"
               alt="Logo"
-              width={32}
-              height={32}
+              width={42}
+              height={42}
+              className="rounded-2xl"
             />
           )}
         </Link>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#0f172a"/> <!-- Tailwind slate-900 background -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- base -->
+    <path d="M10 110 H110" />
+    <!-- walls -->
+    <path d="M30 110 V60 L60 30 L90 60 V110" />
+    <!-- door -->
+    <path d="M55 110 V85 a10 10 0 0 1 20 0 V110" />
+    <!-- small tower window -->
+    <rect x="55" y="55" width="10" height="20" rx="3" />
+    <!-- tower cross -->
+    <path d="M60 20 V5" />
+    <path d="M50 12.5 H70" />
+  </g>
+</svg>
