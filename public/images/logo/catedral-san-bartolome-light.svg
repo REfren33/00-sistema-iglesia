@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160">
+  <!-- Transparent background -->
+  <g fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Minimal church icon on the left (80x80 box starting at x=20,y=40) -->
+    <g transform="translate(20,40)">
+      <!-- base -->
+      <path d="M10 80 H90" />
+      <!-- walls -->
+      <path d="M20 80 V40 L50 20 L80 40 V80" />
+      <!-- door -->
+      <path d="M48 80 V60 a8 8 0 0 1 16 0 V80" />
+      <!-- windows -->
+      <path d="M26 80 V56" />
+      <path d="M84 80 V56" />
+      <!-- tower cross -->
+      <path d="M50 10 V0" />
+      <path d="M43 5 H57" />
+      <!-- small tower window -->
+      <rect x="45" y="30" width="10" height="14" rx="3" />
+    </g>
+  </g>
+  <!-- Text to the right -->
+  <g fill="#000000" font-family="Georgia, 'Times New Roman', serif">
+    <text x="140" y="78" font-size="36" font-weight="700" letter-spacing="2">CATEDRAL</text>
+    <text x="140" y="118" font-size="32" font-weight="700" letter-spacing="1.5">SAN BARTOLOMÉ</text>
+  </g>
+</svg>

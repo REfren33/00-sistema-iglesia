@@ -308,17 +308,17 @@ const AppSidebar: React.FC = () => {
             <>
               <img
                 className="dark:hidden"
-                src="/images/logo/logo.svg"
+                src="/images/logo/catedral-san-bartolome-light.svg"
                 alt="Logo"
-                width={150}
+                width={250}
                 height={40}
               />
               <img
                 className="hidden dark:block"
-                src="/images/logo/logo-dark.svg"
+                src="/images/logo/catedral-san-bartolome-dark.svg"
                 alt="Logo"
-                width={150}
-                height={40}
+                width={250}
+                height={50}
               />
             </>
           ) : (
