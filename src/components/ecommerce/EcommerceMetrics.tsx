@@ -18,7 +18,7 @@ export default function EcommerceMetrics() {
         <div className="flex items-end justify-between mt-5">
           <div>
             <span className="text-sm text-gray-500 dark:text-gray-400">
-              Customers
+              Menbresía total
             </span>
             <h4 className="mt-2 font-bold text-gray-800 text-title-sm dark:text-white/90">
               3,782
@@ -26,7 +26,7 @@ export default function EcommerceMetrics() {
           </div>
           <Badge color="success">
             <ArrowUpIcon />
-            11.01%
+            --
           </Badge>
         </div>
       </div>
@@ -49,7 +49,7 @@ export default function EcommerceMetrics() {
 
           <Badge color="error">
             <ArrowDownIcon />
-            9.05%
+            --
           </Badge>
         </div>
       </div>

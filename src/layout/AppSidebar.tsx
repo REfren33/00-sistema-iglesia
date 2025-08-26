@@ -16,7 +16,7 @@ import {
   UserCircleIcon,
 } from "../icons";
 import { useSidebar } from "../context/SidebarContext";
-import SidebarWidget from "./SidebarWidget";
+
 
 type NavItem = {
   name: string;
@@ -29,34 +29,24 @@ const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
     name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+    subItems: [{ name: "Membresía", path: "/", pro: false }],
   },
+ 
   {
-    icon: <CalenderIcon />,
-    name: "Calendar",
-    path: "/calendar",
-  },
-  {
-    icon: <UserCircleIcon />,
-    name: "User Profile",
-    path: "/profile",
-  },
-  {
-    name: "Forms",
+    name: "Formularios",
     icon: <ListIcon />,
     subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
   },
   {
-    name: "Tables",
+    name: "Tablas",
     icon: <TableIcon />,
     subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
   },
   {
-    name: "Pages",
+    name: "Páginas",
     icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "En blanco", path: "/blank", pro: false },
     ],
   },
 ];
@@ -64,31 +54,32 @@ const navItems: NavItem[] = [
 const othersItems: NavItem[] = [
   {
     icon: <PieChartIcon />,
-    name: "Charts",
+    name: "Administración",
     subItems: [
-      { name: "Line Chart", path: "/line-chart", pro: false },
-      { name: "Bar Chart", path: "/bar-chart", pro: false },
+     /* { name: "Line Chart", path: "/line-chart", pro: false },
+      { name: "Bar Chart", path: "/bar-chart", pro: false },*/
+       { name: "En blanco", path: "/blank", pro: false },
     ],
   },
   {
     icon: <BoxCubeIcon />,
     name: "UI Elements",
-    subItems: [
+    /*subItems: [
       { name: "Alerts", path: "/alerts", pro: false },
       { name: "Avatar", path: "/avatars", pro: false },
       { name: "Badge", path: "/badge", pro: false },
       { name: "Buttons", path: "/buttons", pro: false },
       { name: "Images", path: "/images", pro: false },
       { name: "Videos", path: "/videos", pro: false },
-    ],
+    ],*/
   },
   {
     icon: <PlugInIcon />,
     name: "Authentication",
-    subItems: [
+   /* subItems: [
       { name: "Sign In", path: "/signin", pro: false },
       { name: "Sign Up", path: "/signup", pro: false },
-    ],
+    ],*/
   },
 ];
 
@@ -306,21 +297,24 @@ const AppSidebar: React.FC = () => {
         <Link to="/">
           {isExpanded || isHovered || isMobileOpen ? (
             <>
-              <img
-                className="dark:hidden"
-                src="/images/logo/catedral-san-bartolome-light.svg"
-                alt="Logo"
-                width={250}
-                height={40}
-              />
-              <img
-                className="hidden dark:block"
-                src="/images/logo/catedral-san-bartolome-dark.svg"
-                alt="Logo"
-                width={250}
-                height={50}
-              />
+             <div className="hidden lg:flex">
+                <img
+                  className="dark:hidden"
+                  src="/images/logo/catedral-san-bartolome-light.svg"
+                  alt="Logo"
+                  width={250}
+                  height={40}
+                />
+                <img
+                  className="hidden dark:block"
+                  src="/images/logo/catedral-san-bartolome-dark.svg"
+                  alt="Logo"
+                  width={250}
+                  height={50}
+                />
+              </div>
             </>
+            
           ) : (
             <img
               src="/images/logo/catedral-icon-solid.svg"
@@ -360,7 +354,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Others"
+                  "Otros"
                 ) : (
                   <HorizontaLDots />
                 )}
@@ -369,7 +363,7 @@ const AppSidebar: React.FC = () => {
             </div>
           </div>
         </nav>
-        {isExpanded || isHovered || isMobileOpen ? <SidebarWidget /> : null}
+       
       </div>
     </aside>
   );
