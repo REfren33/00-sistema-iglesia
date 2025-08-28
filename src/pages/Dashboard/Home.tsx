@@ -30,9 +30,9 @@ export default function Home() {
 
    
 
-        <div className="col-span-12 xl:col-span-7">
+        {/*<div className="col-span-12 xl:col-span-7">
           <RecentOrders />
-        </div>
+        </div>*/}
       </div>
     </>
   );

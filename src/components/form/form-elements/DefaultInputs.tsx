@@ -18,31 +18,31 @@ export default function DefaultInputs() {
   };
 
   return (
-    <ComponentCard title="Default Inputs">
+    <ComponentCard title="Formulario">
       <div className="space-y-6">
         <div>
-          <Label htmlFor="input">Input</Label>
+          <Label htmlFor="input">Nombre</Label>
           <Input type="text" id="input" />
         </div>
         <div>
-          <Label htmlFor="inputTwo">Input with Placeholder</Label>
-          <Input type="text" id="inputTwo" placeholder="info@gmail.com" />
+          <Label htmlFor="inputTwo">Correo</Label>
+          <Input type="text" id="inputTwo" placeholder="ejemplo@gmail.com" />
         </div>
         <div>
-          <Label>Select Input</Label>
+          <Label>Lista desplegable</Label>
           <Select
             options={options}
-            placeholder="Select an option"
+            placeholder="Seleccionar opción"
             onChange={handleSelectChange}
             className="dark:bg-dark-900"
           />
         </div>
         <div>
-          <Label>Password Input</Label>
+          <Label>Contraseña</Label>
           <div className="relative">
             <Input
               type={showPassword ? "text" : "password"}
-              placeholder="Enter your password"
+              placeholder="Ingrese su contraseña"
             />
             <button
               onClick={() => setShowPassword(!showPassword)}
@@ -60,8 +60,8 @@ export default function DefaultInputs() {
         <div>
           <DatePicker
             id="date-picker"
-            label="Date Picker Input"
-            placeholder="Select a date"
+            label="Fecha"
+            placeholder="Seleccionar fecha"
             onChange={(dates, currentDateString) => {
               // Handle your logic
               console.log({ dates, currentDateString });
@@ -70,7 +70,7 @@ export default function DefaultInputs() {
         </div>
 
         <div>
-          <Label htmlFor="tm">Time Picker Input</Label>
+          <Label htmlFor="tm">Hora</Label>
           <div className="relative">
             <Input
               type="time"
@@ -83,7 +83,7 @@ export default function DefaultInputs() {
             </span>
           </div>
         </div>
-        <div>
+        {/*<div>
           <Label htmlFor="tm">Input with Payment</Label>
           <div className="relative">
             <Input
@@ -108,7 +108,7 @@ export default function DefaultInputs() {
               </svg>
             </span>
           </div>
-        </div>
+        </div>*/}
       </div>
     </ComponentCard>
   );

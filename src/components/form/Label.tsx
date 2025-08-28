@@ -25,3 +25,4 @@ const Label: FC<LabelProps> = ({ htmlFor, children, className }) => {
 };
 
 export default Label;
+
