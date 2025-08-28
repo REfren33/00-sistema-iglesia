@@ -17,7 +17,7 @@ export default function RadioButtons() {
           value="option1"
           checked={selectedValue === "option1"}
           onChange={handleRadioChange}
-          label="Default"
+          label="Por defecto"
         />
         <Radio
           id="radio2"
@@ -25,7 +25,7 @@ export default function RadioButtons() {
           value="option2"
           checked={selectedValue === "option2"}
           onChange={handleRadioChange}
-          label="Selected"
+          label="Seleccionado"
         />
         <Radio
           id="radio3"
@@ -33,7 +33,7 @@ export default function RadioButtons() {
           value="option3"
           checked={selectedValue === "option3"}
           onChange={handleRadioChange}
-          label="Disabled"
+          label="Deshabilitado"
           disabled={true}
         />
       </div>

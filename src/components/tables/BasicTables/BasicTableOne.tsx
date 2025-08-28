@@ -11,189 +11,145 @@ import Badge from "../../ui/badge/Badge";
 interface Order {
   id: number;
   user: {
-    image: string;
     name: string;
     role: string;
   };
-  projectName: string;
+  address: string;
   team: {
-    images: string[];
+    members: number;
   };
   status: string;
   budget: string;
 }
 
-// Define the table data using the interface
+// Define la data de la tabla sin imágenes
 const tableData: Order[] = [
   {
     id: 1,
     user: {
-      image: "/images/user/user-17.jpg",
-      name: "Lindsey Curtis",
-      role: "Web Designer",
+      name: "Juan Pérez",
+      role: "Casado",
     },
-    projectName: "Agency Website",
+    address: "6a Avenida 4-32, Zona 1, Mazatenango",
     team: {
-      images: [
-        "/images/user/user-22.jpg",
-        "/images/user/user-23.jpg",
-        "/images/user/user-24.jpg",
-      ],
+      members: 3,
     },
-    budget: "3.9K",
+    budget: "3900",
     status: "Active",
   },
   {
     id: 2,
     user: {
-      image: "/images/user/user-18.jpg",
-      name: "Kaiya George",
-      role: "Project Manager",
+      name: "María López",
+      role: "Soltera",
     },
-    projectName: "Technology",
+    address: "3a Calle 7-15, Colonia El Progreso, Mazatenango",
     team: {
-      images: ["/images/user/user-25.jpg", "/images/user/user-26.jpg"],
+      members: 2,
     },
-    budget: "24.9K",
+    budget: "24900",
     status: "Pending",
   },
   {
     id: 3,
     user: {
-      image: "/images/user/user-17.jpg",
-      name: "Zain Geidt",
-      role: "Content Writing",
+      name: "Carlos Méndez",
+      role: "Casado",
     },
-    projectName: "Blog Writing",
+    address: "8a Avenida 12-08, Barrio San Sebastián, Mazatenango",
     team: {
-      images: ["/images/user/user-27.jpg"],
+      members: 1,
     },
-    budget: "12.7K",
+    budget: "12700",
     status: "Active",
   },
   {
     id: 4,
     user: {
-      image: "/images/user/user-20.jpg",
-      name: "Abram Schleifer",
-      role: "Digital Marketer",
+      name: "Ana González",
+      role: "Divorciada",
     },
-    projectName: "Social Media",
+    address: "5a Calle 2-19, Zona 2, Mazatenango",
     team: {
-      images: [
-        "/images/user/user-28.jpg",
-        "/images/user/user-29.jpg",
-        "/images/user/user-30.jpg",
-      ],
+      members: 3,
     },
-    budget: "2.8K",
+    budget: "2800",
     status: "Cancel",
   },
   {
     id: 5,
     user: {
-      image: "/images/user/user-21.jpg",
-      name: "Carla George",
-      role: "Front-end Developer",
+      name: "Luis Ramírez",
+      role: "Soltero",
     },
-    projectName: "Website",
+    address: "10a Avenida 6-55, Colonia La Florida, Mazatenango",
     team: {
-      images: [
-        "/images/user/user-31.jpg",
-        "/images/user/user-32.jpg",
-        "/images/user/user-33.jpg",
-      ],
+      members: 3,
     },
-    budget: "4.5K",
+    budget: "4500",
     status: "Active",
   },
 ];
 
-export default function BasicTableOne() {
+
+export default function BasicTableNoImages() {
   return (
     <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/[0.05] dark:bg-white/[0.03]">
       <div className="max-w-full overflow-x-auto">
         <Table>
-          {/* Table Header */}
+          {/* Encabezado */}
           <TableHeader className="border-b border-gray-100 dark:border-white/[0.05]">
             <TableRow>
               <TableCell
                 isHeader
                 className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                User
+                Usuario
               </TableCell>
               <TableCell
                 isHeader
                 className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                Project Name
+                Nombre del proyecto
               </TableCell>
               <TableCell
                 isHeader
                 className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                Team
+                Dato
               </TableCell>
               <TableCell
                 isHeader
                 className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                Status
+                Estado
               </TableCell>
               <TableCell
                 isHeader
                 className="px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
               >
-                Budget
+                Dato
               </TableCell>
             </TableRow>
           </TableHeader>
 
-          {/* Table Body */}
+          {/* Cuerpo */}
           <TableBody className="divide-y divide-gray-100 dark:divide-white/[0.05]">
             {tableData.map((order) => (
               <TableRow key={order.id}>
                 <TableCell className="px-5 py-4 sm:px-6 text-start">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 overflow-hidden rounded-full">
-                      <img
-                        width={40}
-                        height={40}
-                        src={order.user.image}
-                        alt={order.user.name}
-                      />
-                    </div>
-                    <div>
-                      <span className="block font-medium text-gray-800 text-theme-sm dark:text-white/90">
-                        {order.user.name}
-                      </span>
-                      <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
-                        {order.user.role}
-                      </span>
-                    </div>
-                  </div>
+                  <span className="block font-medium text-gray-800 text-theme-sm dark:text-white/90">
+                    {order.user.name}
+                  </span>
+                  <span className="block text-gray-500 text-theme-xs dark:text-gray-400">
+                    {order.user.role}
+                  </span>
                 </TableCell>
                 <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
-                  {order.projectName}
+                  {order.address}
                 </TableCell>
                 <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
-                  <div className="flex -space-x-2">
-                    {order.team.images.map((teamImage, index) => (
-                      <div
-                        key={index}
-                        className="w-6 h-6 overflow-hidden border-2 border-white rounded-full dark:border-gray-900"
-                      >
-                        <img
-                          width={24}
-                          height={24}
-                          src={teamImage}
-                          alt={`Team member ${index + 1}`}
-                          className="w-full size-6"
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  {order.team.members}
                 </TableCell>
                 <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                   <Badge

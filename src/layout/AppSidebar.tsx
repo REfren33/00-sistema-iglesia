@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router";
 // Assume these icons are imported from an icon library
 import {
   BoxCubeIcon,
+
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
@@ -12,6 +13,7 @@ import {
   PieChartIcon,
   PlugInIcon,
   TableIcon,
+
 } from "../icons";
 import { useSidebar } from "../context/SidebarContext";
 
@@ -33,12 +35,12 @@ const navItems: NavItem[] = [
   {
     name: "Formularios",
     icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    subItems: [{ name: "Ejemplo de elementos", path: "/form-elements", pro: false }],
   },
   {
     name: "Tablas",
     icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+    subItems: [{ name: "Tablas básicas", path: "/basic-tables", pro: false }],
   },
   {
     name: "Páginas",
